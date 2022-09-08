@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+    <h2>Ex 1</h2>
+            <p>Input score physics</p>
+                <input type="number" id="physics">
+
+            <p>Input score chemistry</p>
+                <input type="number" id="chemistry">
+
+            <p>Input score biology</p>
+                <input type="number" id="biology">
+
+            <br><button onclick="avg()">Click</button>
+            <p id="avg"></p>
+            <p id="total"></p>
+        <script>
+            function avg(){
+                var physics = +document.getElementById("physics").value;
+                var chemistry = +document.getElementById("chemistry").value;
+                var biology = +document.getElementById("biology").value;
+                var avg = (physics + chemistry + biology)/3;
+                var total = physics + chemistry + biology;
+                // document.write("Ex 1:" + "<br>")
+                // document.write("Avg:" + avg + "<br>");
+                // document.write("Total:" + total + "<br>");br
+                document.getElementById("avg").innerHTML = "Avg: " + avg;
+                document.getElementById("total").innerHTML = "Total: " + total;
+            }
+
+        </script>
+
+
+    <h2>Ex 2</h2>
+        <p>Enter Celsius</p>
+            <input type="number" id="celsius">
+        <br><button onclick="change()">Change</button>
+        <p id="fahrenheit"></p>
+
+        <script>
+            function change() {
+                var celsius = +document.getElementById("celsius").value;
+                var fahrenheit ;
+                fahrenheit = 1.8 * celsius + 32;
+                //document.write("Fahrenheit:" + fahrenheit);
+                //console.log(fahrenheit)
+            document.getElementById("fahrenheit").innerHTML = "Fahrenheit:" + fahrenheit;
+        }
+        </script>
+    <h2>Ex 3</h2>
+        <p>Enter radius</p>
+            <input type="number" id="Radius">
+        <br><button onclick="S()">Click</button>
+        <p id="area"></p>
+        <script>
+            function S() {
+                var radius = document.getElementById("Radius").value;
+                var area = radius * radius * 3.14;
+                document.getElementById("area").innerHTML = "Area: " + area;
+        }
+        </script>
+    <h2>Ex 4</h2>
+        <p>Enter radius</p>
+        <input type="number" id="Radius1">
+        <br><button onclick="P()">Click</button>
+        <p id="perimeter"></p>
+        <script>
+            function P() {
+                var radius = document.getElementById("Radius1").value;
+                var perimeter = 2 * radius * 3.14;
+                document.getElementById("perimeter").innerHTML = "Perimeter: " + perimeter;
+        }
+    </script>
+
+
+</body>
+</html>
